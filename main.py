@@ -5,6 +5,7 @@ from telethon import TelegramClient
 from telethon.tl.functions.channels import GetParticipantsRequest
 from telethon.tl.types import ChannelParticipantsSearch
 from flask import Flask, render_template_string
+import os
 
 # Telegram API setup
 api_id = 21924891
@@ -12,6 +13,7 @@ api_hash = 'e36584063001075042be33ca7974d723'
 bot_token = '8442972749:AAGunIF40qQhkMCY-LoqiACT2Ou_nyrsJQs'
 channel_username = 'ZararEra'
 
+# Telegram client start
 client = TelegramClient('bot', api_id, api_hash).start(bot_token=bot_token)
 
 # Flask setup
